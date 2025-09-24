@@ -1,51 +1,47 @@
 
-/* svg outline sits above the box but under content */
-.footer-outline {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
+.footer-box {
+  position: relative;
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+  clip-path: polygon(6% 10%, 100% 10%, 100% 100%, 30% 100%, 25% 85%, 0 85%, 0 35%);
 }
 
-.footer-box {
-  position: relative;   
-  z-index: 3;           
-  width: 93%;           
-  max-width: 93%;
-  height: 240px;
-  margin: 0 auto;
-  padding: 36px 60px;
+/* Border effect */
+.footer-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+ background: linear-gradient(to right, #6AFFD9 0%, #6AFFD9 30%, #000000 100%);
+   /* this is the border color */
+  clip-path: polygon(6% 10%, 100% 10%, 100% 100%, 30% 100%, 25% 85%, 0 85%, 0 35%);
+  z-index: -1;
+}
+
+/* Inner layer to create the background and thickness of border */
+.footer-box::after {
+  content: "";
+  position: absolute;
+  inset: 1px; /* <-- thickness of border */
+  background: #000000;  /* inner background */
+  clip-path: polygon(6% 10%, 100% 10%, 100% 100%, 30% 100%, 25% 85%, 0 85%, 0 35%);
+  z-index: -1;
+}
+
+
+.content-box{
+ padding: 36px 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 3.5rem;
   box-sizing: border-box;
   overflow: visible;
-  background: transparent;
-  /* clip-path derived from your SVG coordinates (scaled to percent) */
-  -webkit-clip-path: polygon(
-    9.166667% 5%,
-    96.666667% 5%,
-    96.666667% 95%,
-    38.333333% 95%,
-    35% 78.333333%,
-    5% 78.333333%,
-    5% 95%,
-    5% 25%
-  );
-  clip-path: polygon(
-    9.166667% 5%,
-    96.666667% 5%,
-    96.666667% 95%,
-    38.333333% 95%,
-    35% 78.333333%,
-    5% 78.333333%,
-    5% 95%,
-    5% 25%
-  );
+  flex-wrap: wrap;
+
 }
+
 
 .footer-left {
   display: flex;
@@ -68,6 +64,7 @@
 /* center text */
 .footer-center {
   flex: 1;
+  min-width: 394px;
   max-width: 394px;
   color: #A9A9A9;
   font-size: 18px;
@@ -75,7 +72,7 @@
   text-align: left;
 }
 
-/* right column */
+
 .footer-right {
   min-width: 237px;
   display: flex;
@@ -93,20 +90,28 @@
   width:30px;
   height:30px;
   border-radius:50%;
-  background:#FFFFFF; 
   flex:0 0 30px;
 }
 
 
 .scroll-top {
-  position:absolute; right:-28px; bottom:-28px; z-index:4;
-  width:52px;height:52px;border-radius:50%;
-  border:1.5px solid aqua;
-  background:#A9A9A9;
-  display:grid; place-items:center; color:var(--teal-strong);
-  cursor:pointer; transition: transform .18s ease, background .18s ease, color .18s ease;
+  position: fixed; /* instead of absolute */
+  right: 2.5rem;
+  bottom: 2.4rem;
+  z-index: 100;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid #6AFFD9;
+  background: #0D0F0C;
+  display: grid;
+  place-items: center;
+  color: #6AFFD9;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, color .18s ease;
 }
-.scroll-top:hover { transform: translateY(-3px); background: var(--teal-strong); color:#000; }
+
+
 
 .footer-bottom {
   color: #FFFFFF;
@@ -114,8 +119,42 @@
   font-weight: 400;
   line-height: 7.92px;
   letter-spacing: 0.51px;
-  margin-left: calc((100% - 1180px) / 2 + 110px);
+  margin-left: calc((100% - 1180px) / 2 + 10px);
   font-family: 'Inter', sans-serif;
   opacity: 50%;
-  margin-top: -25px;
+  margin-top: -10px;
+  margin-bottom: 50px;
+}
+@media (max-width: 992px) {
+  .footer-box {
+    clip-path: none; /* also reset the main one */
+  }
+
+  .footer-box::before,
+  .footer-box::after {
+    clip-path: none !important; /* force override */
+    border-radius: 12px;
+  }
+
+  .footer-box::before {
+    background: linear-gradient(to right, #6AFFD9, #000000);
+  }
+
+  .footer-box::after {
+    background: #000000;
+  }
+
+  .content-box {
+    flex-direction: column; /* stack on small screens */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-center {
+    min-width: auto;
+  }
+
+  .footer-right {
+    align-items: center;
+  }
 }

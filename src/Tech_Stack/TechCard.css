@@ -4,6 +4,7 @@
     justify-content: space-between;
     margin: auto;
     height: 180px;
+    /* flex-wrap: wrap; */
 }
 .tech-card {
   background:  #111; 

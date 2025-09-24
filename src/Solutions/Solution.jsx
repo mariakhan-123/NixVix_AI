@@ -11,7 +11,7 @@ function Solution() {
             alignItems: "center",
         }}>
             <div style={{
-                display: "flex"
+                display: "flex", gap: "1rem"
             }}>
                 <Button label="Computer Vision" />
                 <Button label="Pose Estimation" />

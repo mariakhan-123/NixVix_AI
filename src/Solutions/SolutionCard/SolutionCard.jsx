@@ -1,18 +1,17 @@
 import React from 'react'
 import './SolutionCard.css'
+import computerVision from "../../assets/computerVision.png"
 
 function SolutionCard() {
   return (
    <div className="solution-card">
-  {/* Top Image */}
+
   <div className="solution-image">
-    <img src="computer-vision.jpg" alt="Computer Vision" />
+    <img src= {computerVision} alt="Computer Vision" />
   </div>
 
-  {/* Title */}
   <h3 className="solution-title">Computer Vision</h3>
 
-  {/* Tags */}
   <div className="solution-tags">
     <span className="tag">Detection</span>
     <span className="tag">Segmentation</span>
