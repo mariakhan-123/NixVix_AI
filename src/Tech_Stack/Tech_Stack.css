@@ -1,0 +1,67 @@
+
+.main-container {
+  position: relative;
+  height: 100vh;
+  width: 93%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background:no-repeat center center/cover;
+  margin-bottom: 30px;
+  
+}
+.services-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6); 
+  padding: 3rem;
+}
+
+.services-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.services-subtitle {
+  font-weight: 400;
+  font-size: 50px;
+  color: #FFFFFF;
+  margin-bottom: 2.5rem;
+}
+
+.services-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.service-btn {
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.2); 
+}
+
+.service-btn:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.6);
+  border-color: rgba(0, 255, 200, 0.8);
+}

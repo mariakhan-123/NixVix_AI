@@ -1,0 +1,54 @@
+.feature-card {
+  max-width: 1130px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.feature-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.feature-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.feature-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #262626;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 524px;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-info {
+  background: #0F0F0F;
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 1px solid #194439;
+}
+
+.feature-info strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature-info p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #FFFFFF;
+}

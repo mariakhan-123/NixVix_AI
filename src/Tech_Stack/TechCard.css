@@ -1,0 +1,67 @@
+.cards{
+    display: flex;
+    width: 93%;
+    justify-content: space-between;
+    margin: auto;
+    height: 180px;
+}
+.tech-card {
+  background:  #111; 
+  width: 150px;
+  height: 125px; 
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   
+  justify-content: flex-start;
+  padding: 1rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tech-card:hover {
+  height: 180px; /* expand only the hovered card */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(
+    135deg,
+    #0C0C0C 0%,              
+     rgba(0, 198, 167, 0.2) 100% 
+  );
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+}
+
+.tech-card .icon {
+  font-size: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.tech-card .icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.tech-card .title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.tech-card .description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 0.5rem;
+  margin-top: 0.5rem;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  color: #bbb;
+}
+
+.tech-card:hover .description {
+  opacity: 1;
+  max-height: 100px;
+}

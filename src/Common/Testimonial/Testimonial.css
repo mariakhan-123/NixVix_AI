@@ -1,0 +1,110 @@
+/* Section */
+.testimonial-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #fff;
+  background: #000;
+}
+
+/* Replace existing .testimonial-card with this */
+.testimonial-card {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+
+  /* remove solid grey border and allow gradient border to show */
+  border: 20px solid transparent;
+  border-radius: 50px;
+
+  /* padding / layout / shadow unchanged */
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  text-align: left;
+
+  /* Two-layer background:
+     1) inner dark layer (padding-box) to keep text readable
+     2) outer gradient layer (border-box) used as border */
+  background-image:
+    linear-gradient(45deg, #111111f5, rgba(17,17,17,0.92)), /* inner dark */
+    linear-gradient(45deg, #677674 0%, #555e5d 40%, #161e1d 70%, #111111f5 100%); /* border gradient (screenshot colors) */
+
+  /* ensure first layer is clipped to padding-box, second to border-box */
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  background-repeat: no-repeat;
+}
+
+/* subtle inner tint/glow using same palette (keeps effect soft like screenshot) */
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: calc(50px - 20px); /* inner radius (card radius minus border width) */
+  pointer-events: none;
+  background: linear-gradient(45deg, rgba(46,122,119,0.03), rgba(255,123,45,0.02));
+  mix-blend-mode: overlay;
+}
+
+
+.quote-icon {
+  font-size: 2.5rem;
+  color: #2B706D;
+  display: block;      /* forces it onto its own line */
+  margin-bottom: 1rem; /* spacing before paragraph */
+}
+
+.testimonial-text {
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 1px;
+  font-family: 'Prompt', sans-serif;
+  font-style: italic;
+  text-align: left; 
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid #27f0d5;
+  margin-bottom: 0.5rem;
+}
+
+.client-name {
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: #E0E0E0;
+  font-size: 19px;
+}
+.arrow {
+  position: absolute;
+  top: 75%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #EBECF1;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #fff;
+}
+
+.arrow-left {
+  left: 2rem;
+}
+
+.arrow-right {
+  right: 2rem;
+}

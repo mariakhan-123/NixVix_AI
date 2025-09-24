@@ -1,0 +1,38 @@
+.cards-container {
+  position: relative; /* needed for pseudo-element */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  z-index: 1; /* ensures content stays above background */
+}
+
+.cards-container::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* full overlay */
+  background: radial-gradient(
+    circle at center,
+    rgba(43, 112, 109, 0.6) 0%,
+    transparent 50%
+  );
+  filter: blur(80px);
+  z-index: 1;
+}
+
+.card {
+  /* remove fixed width */
+  height: 169px;
+  border-radius: 30px;
+  border: 2px solid #1C1C1C;
+  background:  #0e0909;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+   padding: 0 2rem;
+}

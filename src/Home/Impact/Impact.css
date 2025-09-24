@@ -1,0 +1,44 @@
+.impact-section {
+  max-width: 1300px;
+  text-align: center;
+  padding: 0px 20px;
+  color: #FFFFFF;
+  margin: auto;
+}
+
+.impact-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(32, 27, 27, 0.5);
+  border-radius: 100px;
+  padding: 40px 20px;
+  max-width: 93%;
+  margin: 0 auto 60px;
+  backdrop-filter: blur(8px); 
+  border: 2px solid #1C1C1C;
+  
+}
+
+.stat h3 {
+  font-size: 2.1875rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.stat p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+
+
+@media (max-width: 768px) {
+  .impact-stats {
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 20px;
+  }
+}

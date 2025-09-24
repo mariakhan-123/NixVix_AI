@@ -1,0 +1,135 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 93%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background:no-repeat center center/cover;
+  margin-bottom: 30px;
+  
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  left: 100px;  
+  right: 50px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 2px,
+    transparent 1px,
+    transparent 200px
+  );
+  z-index: 2; 
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.badge {
+  font-family: 'Inter', sans-serif;
+  display: inline-block;
+  background: rgba(27, 61, 53, 0.8);
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 24px;
+  font-style: italic;
+  max-width: 563px;
+  line-height: 24px;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #348E77;
+  margin-top:3rem;
+}
+.hero p {
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  font-family: 'Jost', sans-serif;
+  text-shadow: 0px 14px 74px rgba(0, 0, 0, 0.85);
+  max-width: 805px;   
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+.btn-filled {
+  background: #2E7A77;
+  color: #FFFFFF;
+  border: none;
+  font-weight: 500;
+  font-size: 17.58px;
+  box-shadow: 0px 4px 54px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.btn-filled:hover {
+  background: #27f0d5;
+  color: #000;
+}
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #27f0d5;
+  z-index: 2;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -15px);
+  }
+  60% {
+    transform: translate(-50%, -8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
