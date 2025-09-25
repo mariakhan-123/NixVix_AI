@@ -1,3 +1,8 @@
+.title{
+ width: 78%;
+margin:  auto;
+}
+
 .case-studies {
   display: flex;
   gap: 20px;
@@ -59,10 +64,39 @@
 }
 
 .case-desc {
-   padding: 0px 16px;
+  padding: 0px 16px;
   font-size: 0.9rem;
   font-weight: 400;
   color: #C6C6C6;
   line-height: 24px;
   margin-bottom: 30px;
 }
+
+.title {
+  margin-bottom: 20px;
+}
+
+.heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background: #222;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+   background: transparent;
+  border: 2px solid #6AFFD9;
+  color: #6AFFD9;
+  font-size: 0.6rem;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+
+
