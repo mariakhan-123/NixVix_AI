@@ -4,7 +4,6 @@
     justify-content: space-between;
     margin: auto;
     height: 180px;
-    /* flex-wrap: wrap; */
 }
 .tech-card {
   background:  #111; 
@@ -23,7 +22,7 @@
 }
 
 .tech-card:hover {
-  height: 180px; /* expand only the hovered card */
+  height: 180px; 
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
   background: linear-gradient(
     135deg,
@@ -32,6 +31,7 @@
   );
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   transform: translateY(-6px);
+  border-radius: 12px;
 }
 
 .tech-card .icon {
@@ -50,6 +50,7 @@
   font-weight: 700;
   font-size: 20px;
   color: #FFFFFF;
+  margin: 10px 0px;
 }
 
 .tech-card .description {
@@ -57,7 +58,7 @@
   max-height: 0;
   overflow: hidden;
   font-size: 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0px;
   transition: max-height 0.4s ease, opacity 0.4s ease;
   color: #bbb;
 }
@@ -66,3 +67,25 @@
   opacity: 1;
   max-height: 100px;
 }
+
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  gap: 50px; 
+  animation: scroll 25s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+

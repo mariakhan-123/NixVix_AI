@@ -66,3 +66,65 @@
   line-height: 150%;
   color: #FFFFFF;
 }
+@media (max-width: 992px) {
+  .solution-card {
+    padding: 25px;
+    margin: 40px 30px;
+  }
+
+  .solution-image img {
+    height: 360px; /* shrink image height */
+  }
+
+  .solution-title {
+    font-size: 1.4rem; /* ~22px */
+  }
+
+  .solution-description strong {
+    font-size: 1.1rem;
+  }
+
+  .solution-description p {
+    font-size: 1rem;
+  }
+}
+
+/* 📱 Mobile (≤576px) */
+@media (max-width: 576px) {
+  .solution-card {
+    padding: 20px;
+    margin: 30px 20px;
+    text-align: center; /* center align text on mobile */
+  }
+
+  .solution-image img {
+    height: 240px; /* smaller image */
+  }
+
+  .solution-title {
+    font-size: 1.2rem;
+  }
+
+  .solution-tags {
+    justify-content: center; /* center tags */
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+  }
+
+  .solution-description {
+    padding: 12px 15px;
+    text-align: center;
+  }
+
+  .solution-description strong {
+    font-size: 1rem;
+  }
+
+  .solution-description p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}

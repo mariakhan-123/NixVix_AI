@@ -1,0 +1,62 @@
+.voiceTech-container {
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 60px;
+}
+
+.voiceTech-container .subtitle {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff; /* adjust if dark background */
+}
+
+.voiceTech-image {
+  background-image: url("../../assets/voiceTech.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1150px;
+  width: 100%;         /* responsive width */
+  height: 650px;       /* default desktop height */
+  margin: 20px 0;
+  border: 1px solid #1F805399;
+  border-radius: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 📱 Tablet screens (≤992px) */
+@media (max-width: 992px) {
+  .voiceTech-container {
+    margin: 40px 20px;
+  }
+
+  .voiceTech-container .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .voiceTech-image {
+    height: 450px;
+    border-radius: 30px;
+  }
+}
+
+/* 📱 Mobile screens (≤576px) */
+@media (max-width: 576px) {
+  .voiceTech-container {
+    margin: 30px 15px;
+  }
+
+  .voiceTech-container .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .voiceTech-image {
+    height: 250px; /* smaller for mobiles */
+    border-radius: 20px;
+  }
+}

@@ -1,20 +1,83 @@
 .about-section {
-  padding: 80px 20px;
+  padding: 0px 20px;
 }
 
 .about-container {
-  width: 1130px;
+  max-width: 1130px;
   margin: 0 auto;
   padding: 80px 20px;
 }
+.about-heading{
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  line-height: 5.9375rem;
+}
 .about-description {
   font-family: 'Inter', sans-serif;
-  font-size: 25px;
+  font-size: 1.3rem;
   font-weight: 400;
-  color: #FFFFFF; 
+  color: #FFFFFF;
   line-height: 37px;
   margin-bottom: 32px;
   max-width: 1078px;
-  
 }
 
+/* ===== Tablet (up to 992px) ===== */
+@media (max-width: 992px) {
+  .about-section {
+    padding: 60px 20px;
+  }
+
+  .about-container {
+    padding: 60px 15px;
+  }
+
+  .about-container h2 {
+    font-size: 2rem;   /* ~32px */
+    line-height: 2.5rem ;
+  }
+
+  .about-description {
+    font-size: 1.1rem; /* ~18px */
+    line-height: 28px;
+  }
+}
+
+/* ===== Mobile (up to 768px) ===== */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .about-container {
+    padding: 40px 10px;
+  }
+
+  .about-container h2 {
+    font-size: 1.7rem;   /* ~27px */
+    line-height: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .about-description {
+    font-size: 1rem;     /* ~16px */
+    line-height: 24px;
+    text-align: justify;
+  }
+}
+
+/* ===== Small Mobile (up to 480px) ===== */
+@media (max-width: 480px) {
+  .about-container h2 {
+    font-size: 1.5rem;   /* ~24px */
+    line-height: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .about-description {
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+     text-align: justify;
+  }
+}

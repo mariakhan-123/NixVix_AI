@@ -6,15 +6,18 @@
   border-bottom: 1px solid #212423;
   width: 93%;
   margin: auto;
+  position: relative;
+  z-index: 20;
 }
 
 .logo img {
   width: 243px;
   height: 75px;
-   display: block;
- margin-top: 13px;
+  display: block;
+  margin-top: 13px;
 }
 
+/* ===== Desktop Nav ===== */
 .nav-links {
   display: flex;
   gap: 34px;
@@ -31,9 +34,10 @@
   padding: 10px;
   gap: 10px;
 }
+
 .nav-link.active {
   color: #B14A1C; 
-   transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 
 .nav-link.active::after {
@@ -41,25 +45,89 @@
   position: absolute;
   left: 0;
   bottom: -10px;
-  width: 120%;           /* 18% wider than text */
+  width: 120%;          
   height: 1px;
   background-color: #B14A1C;
-  transform: translateX(-9%); /* shift half of extra width */
+  transform: translateX(-9%); 
 }
 
+/* ===== CTA Button ===== */
 .talk-btn {
   background: #B14A1C;
   font-family: 'Inter', sans-serif;
   color: #FFFFFF;
   border: none;
-  padding: 13px 25px;
-  border-radius: 118px;
-  font-size: 17.58px;
+  padding: 0.8125rem 1.5625rem; /* 13px 25px converted to rem */
+  border-radius: 2rem;
+  font-size: 1.09875rem; /* ~17.58px */
   font-weight: 500;
   cursor: pointer;
   line-height: 24px;
   letter-spacing: 0;
-
 }
 
+/* ===== Hamburger Icon ===== */
+.hamburger-icon {
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: none; /* hidden on desktop */
+  z-index: 30;
+}
 
+.hamburger-icon:hover {
+  color: #B14A1C;
+  transform: scale(1.2);
+}
+
+/* ===== Dropdown Menu (Mobile) ===== */
+.dropdown-menu {
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 25;
+  display: none;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu.open {
+  display: flex;
+}
+
+.dropdown-menu .nav-link {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu .talk-btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  display: block !important;
+}
+.dropdown-menu .nav-link.active::after {
+  content: none !important;
+}
+.dropdown-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0.7rem;
+}
+
+@media (max-width: 992px) {
+  .navbar .nav-links,
+  .navbar .talk-btn {
+    display: none; 
+  }
+  .navbar .hamburger-icon {
+    display: block; 
+  }
+}

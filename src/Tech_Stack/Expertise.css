@@ -1,3 +1,4 @@
+/* Base styles (desktop / large screens) */
 .horizontal-card {
   display: flex;
   align-items: center;
@@ -35,12 +36,41 @@
 }
 
 .card-title {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .card-description {
-  font-size: 1rem;
+  font-size: 18px;
+  line-height: 28px;
   color: #bbb;
+}
+
+/* 📱 Tablet screens */
+@media (max-width: 992px) {
+  .horizontal-card {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .card-icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
 }

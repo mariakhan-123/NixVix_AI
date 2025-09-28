@@ -52,12 +52,15 @@ function Testimonial() {
             <p className="client-name">— {name}</p>
           </div>
 
-          <button className="arrow arrow-left" onClick={handlePrev}>
-            <FiArrowLeft size={24} />
-          </button>
-          <button className="arrow arrow-right" onClick={handleNext}>
-            <FiArrowRight size={24} />
-          </button>
+          <div className="testimonial-arrows">
+  <button className="arrow arrow-left" onClick={handlePrev}>
+    <FiArrowLeft size={24} />
+  </button>
+  <button className="arrow arrow-right" onClick={handleNext}>
+    <FiArrowRight size={24} />
+  </button>
+</div>
+
         </div>
       </section>
     </div>

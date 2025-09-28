@@ -105,31 +105,92 @@
 }
 
 .scroll-down {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  text-align: center;
   color: #27f0d5;
   z-index: 2;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translate(-50%, 0);
-  }
-  40% {
-    transform: translate(-50%, -15px);
-  }
-  60% {
-    transform: translate(-50%, -8px);
-  }
+  
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: auto; 
+    padding: 4rem 1rem 6rem; 
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .badge {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    line-height: 1.2rem;
+  }
+
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
   }
 
   .hero p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .btn-filled {
+    font-size: 1rem;
+  }
+  .scroll-down{
+    margin-top: -100px;
   }
 }
+
+/* Smaller phones */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 0.8rem 5rem;
+  }
+
+  .badge {
+    font-size: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    margin-top: 0.3rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .scroll-down svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+}
+
