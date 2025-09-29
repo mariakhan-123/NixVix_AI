@@ -17,7 +17,7 @@ function Tech_Stack() {
           <h1 className='heading1'>
             Tech Stack
           </h1>
-          <p className="services-subtitle">
+          <p className="techstack-subtitle">
             Engine Behind Our AI
            </p>
         </div>

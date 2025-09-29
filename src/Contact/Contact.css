@@ -129,9 +129,7 @@ textarea {
   box-shadow: 0 0 8px rgba(39,240,213,0.6);
 }
 
-/* ============================= */
-/* 📱 Responsive Design */
-/* ============================= */
+
 
 /* Tablets (<= 1024px) */
 @media (max-width: 1024px) {
@@ -155,7 +153,7 @@ textarea {
 /* Mobile (<= 768px) */
 @media (max-width: 768px) {
   .contact-form {
-    flex-direction: column; /* stack left and right */
+    flex-direction: column; 
   }
 
   .form-left,
@@ -209,4 +207,101 @@ textarea {
     font-size: 14px;
     padding: 0.7rem;
   }
+}
+
+.contact-form-alt {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.contact-box-alt p {
+  font-family: 'Inter', sans-serif;
+  color: #A9A9A9;
+  font-weight: 400;
+  margin-bottom: 25px;
+  line-height: 28px;
+}
+
+
+.contact-form-alt .form-row {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.contact-form-alt .form-row input,
+.contact-form-alt .form-row select,
+.contact-form-alt textarea {
+  flex: 1;
+}
+
+.contact-form-alt .row-single {
+  display: block;
+  width: 100%;
+}
+
+.contact-form-alt .row-single select,
+.contact-form-alt .row-single textarea {
+  width: 100%;
+}
+.contact-box-alt {
+  display: flex;
+  gap: 7rem;
+  align-items: center;
+  justify-content: center;
+  padding: 160px;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+
+.contact-info {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.contact-form-alt input,
+.contact-form-alt select,
+.contact-form-alt textarea {
+  padding: 6px 8px;       
+  font-size: 0.85rem;     
+  border-radius: 3px;   
+}
+
+.contact-form-alt textarea {
+  min-height: 100px;    
+}
+
+
+.contact-form-alt .form-consent {
+   
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  color: #FFFFFF;
+
+}
+
+
+.contact-form-alt .submit-btn {
+  padding: 0.6rem 0.9rem;
+  font-size: 14px;
+  border-radius: 80px;
+  gap: 8px;
+}
+
+.contact-form-alt .submit-btn span {
+  font-size: 1rem;
+}
+.contact-info{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+ .contact-item span{
+  font-size: 1rem;
 }
