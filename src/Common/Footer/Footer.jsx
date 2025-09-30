@@ -11,7 +11,7 @@ function Footer() {
         <footer className="footer-box">
           <div className='content-box'>
           <div className="footer-left">
-            <img src={Logo} alt="Nixense Vixion" className="footer-logo" />
+            <img src={Logo} alt="Nixense Vixion" className="footer-logo" width="90" height="90"/>
             <span className="brand">Nixense <br /> Vixion</span>
           </div>
 
@@ -38,7 +38,7 @@ function Footer() {
 
             <div className="contact-item">
               <span className="contact-icon" aria-hidden="true">
-                 <img src={emailIcon}/>
+                 <img src={emailIcon} />
               </span>
               <span>Email: hello@nixvix.ai</span>
             </div>

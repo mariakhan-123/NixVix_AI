@@ -7,6 +7,8 @@ import TechStack from "./Tech_Stack/Tech_Stack";
 import Solutions from "./Solutions/Solutions";
 import Footer from "./Common/Footer/Footer";
 import ContactUs from "./Contact/ContactUs";
+import CaseStudies from "./Case_Studies/CaseStudies";
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,7 @@ function App() {
         <Route path="/techstack" element={<TechStack />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/contact-us" element={<ContactUs />} />
+         <Route path="/case-studies" element={<CaseStudies />} />
       </Routes>
       <Footer/>
     </Router>

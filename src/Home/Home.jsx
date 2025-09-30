@@ -11,8 +11,9 @@ import Workflow from './Workflow/Workflow'
 import Partners from '../Common/Partners/Partners'
 import Impact from './Impact/Impact'
 import  { useRef } from "react";
-import CaseStudy from './CaseStudy/CaseStudy'
+import CaseStudyList from '../Case_Studies/CaseStudyList';
 import Industries from './Industries/Industries'
+import { caseData } from '../Case_Studies/CaseStudyData'
 function Home() {
   const aboutRef = useRef(null);
   return (
@@ -26,7 +27,7 @@ function Home() {
       <TechCards/>
       <Solution/>
       <VoiceTech/>
-      <CaseStudy/>
+      <CaseStudyList caseData={caseData} showHeader={true} />
       <Industries/>
       <Partners/>
       <Testimonial/>

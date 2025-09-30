@@ -51,20 +51,28 @@
   transform: translateX(-9%); 
 }
 
-/* ===== CTA Button ===== */
 .talk-btn {
   background: #B14A1C;
   font-family: 'Inter', sans-serif;
   color: #FFFFFF;
   border: none;
-  padding: 0.8125rem 1.5625rem; /* 13px 25px converted to rem */
+  padding: 0.8125rem 1.5625rem;
   border-radius: 2rem;
-  font-size: 1.09875rem; /* ~17.58px */
+  font-size: 1.09875rem;
   font-weight: 500;
   cursor: pointer;
   line-height: 24px;
-  letter-spacing: 0;
+  transition: transform 0.2s ease-in-out; /* smooth scaling */
 }
+
+.talk-btn:hover {
+  transform: scale(1.1); /* hover effect */
+}
+
+.talk-btn:active {
+  transform: scale(0.95); /* tap/click effect */
+}
+
 
 /* ===== Hamburger Icon ===== */
 .hamburger-icon {

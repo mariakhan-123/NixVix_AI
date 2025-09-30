@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/Logo.png";
 import "./Navbar.css";
-import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="logo">
-        <img src={logo} alt="Logo" />
+        <img src={logo} alt="Logo" width="243" height="75" />
       </div>
 
       {/* Desktop Nav */}
@@ -36,25 +35,15 @@ export default function Navbar() {
         </NavLink>
       </nav>
       <Link to="/contact-us">
-      <div>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{
-            type: "spring",
-            mass: 1,
-            stiffness: 300,
-            damping: 20,
-          }}
-          className="talk-btn"
-        >
-          Let’s Talk AI
-        </motion.button>
-      </div>
+        <div>
+          <button className="talk-btn">
+                Let’s Talk AI
+              </button>
+        </div>
       </Link>
       {/* Hamburger Icon */}
       <FontAwesomeIcon
-        icon={isOpen ? faTimes : faBars} // switch between bars & close
+        icon={isOpen ? faTimes : faBars} 
         size="1x"
         className="hamburger-icon"
         onClick={toggleMenu}
@@ -87,22 +76,12 @@ export default function Navbar() {
           Solutions
         </NavLink>
         <div className="dropdown-btn-wrapper">
-        <NavLink className="nav-link" onClick={() => setIsOpen(false)}>
-          <Link to="/contact-us">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{
-              type: "spring",
-              mass: 1,
-              stiffness: 300,
-              damping: 20,
-            }}
-            className="talk-btn"
-          >
-            Let’s Talk AI
-          </motion.button></Link>
-        </NavLink></div>
+          <NavLink className="nav-link" onClick={() => setIsOpen(false)} to="/contact-us">
+            
+              <button className="talk-btn">
+                Let’s Talk AI
+              </button>
+          </NavLink></div>
       </div>
     </header>
   );

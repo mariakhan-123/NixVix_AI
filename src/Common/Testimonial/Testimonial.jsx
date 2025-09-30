@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FaQuoteLeft } from "react-icons/fa";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuoteLeft, faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import clientImg from "../../assets/clientImg.jpg";
 import clientImg2 from "../../assets/clientImg2.jpg";
 import "./Testimonial.css";
@@ -43,7 +43,7 @@ function Testimonial() {
 
         <div className="testimonial-card">
           <div className="testimonial-content">
-            <FaQuoteLeft className="quote-icon" />
+           <FontAwesomeIcon icon={faQuoteLeft} className="quote-icon" /> 
             <p className="testimonial-text">“{text}”</p>
           </div>
 
@@ -54,10 +54,10 @@ function Testimonial() {
 
           <div className="testimonial-arrows">
   <button className="arrow arrow-left" onClick={handlePrev}>
-    <FiArrowLeft size={24} />
+    <FontAwesomeIcon icon={faArrowLeft} size={24}/>
   </button>
   <button className="arrow arrow-right" onClick={handleNext}>
-    <FiArrowRight size={24} />
+    <FontAwesomeIcon icon={faArrowRight} size={24}/>
   </button>
 </div>
 
